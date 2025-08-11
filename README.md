@@ -25,10 +25,19 @@ This repository is a multi-project monorepo containing:
   - Build: `cd esp32 && pio run`
   - Upload: `pio run -t upload`
 
-## Architecture
-- Backend: Express app exposing `GET /health`. Extend with routes, middleware, and services.
-- Android: MVVM + Hilt DI, Compose UI, Retrofit API client, BLE service stub, QR scanner (CameraX scaffolding), navigation between Map/Ride/Profile.
-- ESP32: Arduino framework sketch; replace with board logic and modules.
+## Architecture (at a glance)
+
+```mermaid
+graph TD
+  App[Android App] -->|REST| Backend
+  App -->|BLE| ESP32
+  ESP32 -->|MQTT| Broker
+  Backend --> DB[(PostgreSQL)]
+```
+
+## Documentation
+- English docs: `docs/en/`
+- Česká dokumentace: `docs/cs/`
 
 ## CI
 GitHub Actions run per-package lint/test/build:
@@ -50,5 +59,3 @@ android/
 esp32/
 .github/workflows/
 ```
-
- 
