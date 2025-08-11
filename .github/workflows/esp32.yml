@@ -21,6 +21,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Cache PlatformIO
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.platformio
+          key: ${{ runner.os }}-platformio-${{ hashFiles('esp32/platformio.ini') }}
+          restore-keys: |
+            ${{ runner.os }}-platformio-
       - name: Install PlatformIO
         run: pip install -U platformio
       - name: Build firmware
