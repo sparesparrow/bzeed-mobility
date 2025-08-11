@@ -1,0 +1,23 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BZEED banner">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0E7C66"/>
+      <stop offset="100%" stop-color="#3A86FF"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0.5" x2="0.5" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g transform="translate(200,60)">
+    <rect x="0" y="220" width="600" height="12" rx="6" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="120" cy="220" r="36" fill="#FFF"/>
+    <circle cx="480" cy="220" r="36" fill="#FFF"/>
+    <rect x="210" y="80" width="180" height="14" rx="7" fill="#FFB703"/>
+    <path d="M 60 200 Q 140 140 240 140 Q 340 140 420 200" stroke="#FFF" stroke-width="8" fill="none"/>
+    <rect x="220" y="120" width="40" height="60" fill="#0E7C66"/>
+  </g>
+  <text x="850" y="170" font-size="48" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, \"Apple Color Emoji\", \"Segoe UI Emoji\"" fill="#fff" font-weight="700">BZEED</text>
+  <text x="850" y="220" font-size="20" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, \"Apple Color Emoji\", \"Segoe UI Emoji\"" fill="#fff" opacity="0.9">Shared e‑scooters platform</text>
+</svg>

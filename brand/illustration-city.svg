@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="City illustration with scooter">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#CDEDF4"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <g opacity="0.9">
+    <rect x="80" y="220" width="180" height="280" fill="#D1D5DB"/>
+    <rect x="300" y="180" width="220" height="320" fill="#CBD5E1"/>
+    <rect x="560" y="240" width="200" height="260" fill="#E5E7EB"/>
+    <rect x="800" y="200" width="260" height="300" fill="#D1D5DB"/>
+  </g>
+  <rect x="0" y="600" width="1200" height="200" fill="#0E7C66"/>
+  <rect x="0" y="640" width="1200" height="16" fill="#FFB703"/>
+  <g transform="translate(160,560)">
+    <circle cx="120" cy="140" r="48" fill="#fff"/>
+    <circle cx="440" cy="140" r="48" fill="#fff"/>
+    <path d="M 120 140 L 240 140 L 300 60 L 420 140" stroke="#fff" stroke-width="12" fill="none"/>
+    <rect x="260" y="70" width="20" height="60" fill="#3A86FF"/>
+  </g>
+</svg>

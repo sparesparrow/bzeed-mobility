@@ -3,7 +3,7 @@ package com.example.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.MaterialTheme
+import com.example.app.ui.theme.AppTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun AppRoot() {
     val navController = rememberNavController()
-    MaterialTheme {
+    AppTheme {
         Scaffold { _ ->
             AppNavGraph(navController = navController)
         }
