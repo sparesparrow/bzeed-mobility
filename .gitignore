@@ -31,6 +31,8 @@ outputs/
 .gradle/6.*/
 .gradle/7.*/
 .gradle/8.*/
+# Ignore wrapper jar if present
+**/gradle/wrapper/gradle-wrapper.jar
 
 # PlatformIO
 .pio/
