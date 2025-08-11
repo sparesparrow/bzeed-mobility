@@ -1,0 +1,5 @@
+/.pio/
+/.vscode/
+/.clangd/
+/.cache/
+/include/secrets.h
