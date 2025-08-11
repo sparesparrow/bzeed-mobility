@@ -1,0 +1,49 @@
+# Node
+node_modules/
+coverage/
+.nyc_output/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Editor/OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Android/Gradle
+.gradle/
+**/build/
+local.properties
+.cxx/
+*.iml
+captures/
+outputs/
+# Gradle wrapper caches
+.gradle/6.*/
+.gradle/7.*/
+.gradle/8.*/
+# Ignore wrapper jar if present
+**/gradle/wrapper/gradle-wrapper.jar
+
+# PlatformIO
+.pio/
+.clangd/
+
+# Python/venv
+.venv/
+venv/
+__pycache__/
+
+# Misc
+.env
+.env.*
+*.local
