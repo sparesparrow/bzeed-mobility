@@ -14,26 +14,36 @@ This repository is a multi-project monorepo containing:
   - Test: `npm test`
   - Lint: `npm run lint`
   - Build: `npm run build`
+  - Docker: `docker build -t backend:dev backend && docker run --rm -p 3000:3000 --env-file backend/.env backend:dev`
 
 - Android
-  - Open `android` in Android Studio (Arctic Fox or newer)
-  - Select a device/emulator and run. Gradle will sync automatically.
-  - Lint/Test from Gradle tool window or CLI.
+  - Open `android` in Android Studio (Hedgehog or newer). JDK 17 and SDK 34.
+  - CLI (CI-managed): lint/test via Gradle action
 
 - ESP32
-  - Requires PlatformIO (`pip install platformio`)
+  - Requires PlatformIO (`pip install --user platformio`)
   - Build: `cd esp32 && pio run`
   - Upload: `pio run -t upload`
 
-## CI
+## Architecture
+- Backend: Express app exposing `GET /health`. Extend with routes, middleware, and services.
+- Android: MVVM + Hilt DI, Compose UI, Retrofit API client, BLE service stub, QR scanner (CameraX scaffolding), navigation between Map/Ride/Profile.
+- ESP32: Arduino framework sketch; replace with board logic and modules.
 
-GitHub Actions run per-package lint/test:
-- Backend: installs Node, lints with ESLint, runs Jest tests, and builds
-- Android: sets up Java and Android SDK, runs Gradle `lint` and `test`
-- ESP32: installs PlatformIO and builds firmware
+## CI
+GitHub Actions run per-package lint/test/build:
+- Backend: Node 22, `npm ci`, ESLint, Jest, `tsc` build
+- Android: JDK 17, Android SDK 34, Gradle 8.7 via action, runs `lint test`
+- ESP32: Python + PlatformIO, runs `pio run`
+
+## Configuration & Security
+- Backend env: see `backend/.env.example`. Do not commit secrets. Use repository or org secrets in CI.
+- Android: do not hardcode secrets; prefer remote config; handle runtime permissions for camera/BLE/location.
+- ESP32: avoid embedding production credentials; use provisioning.
+
+See `CONTRIBUTING.md` and `SECURITY.md` for details.
 
 ## Structure
-
 ```
 backend/
 android/

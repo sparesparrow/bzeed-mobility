@@ -1,9 +1,26 @@
 # Android (Kotlin + Jetpack Compose)
 
-Open the `android` folder in Android Studio to sync and run.
+## Overview
+- MVVM with Hilt DI
+- Compose UI with Navigation
+- Retrofit client for backend API
+- BLE service stub
+- QR scanner scaffolding using CameraX
 
-## CLI
-- Lint: `gradle lint` (CI runs with a provided Gradle version)
-- Unit tests: `gradle test`
+## Modules
+- `app` module only for now
 
-Note: CI config sets up JDK 17 and Android SDK (API 34) automatically.
+## Running
+- Open `android` in Android Studio (JDK 17; SDK 34)
+- Select a device/emulator and Run
+- Lint: from IDE or CI; Tests: from IDE or CI
+
+## Permissions
+- Camera (QR), Bluetooth (connect/scan), Location (BLE scan on Android 12+)
+- Runtime permissions must be requested by screens before using camera/ble
+
+## Navigation
+- `Map` → `Ride` → `Profile` via `AppNavGraph`
+
+## DI
+- Hilt `@HiltAndroidApp` application class and modules in `di/`

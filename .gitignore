@@ -15,6 +15,9 @@ yarn-error.log*
 .idea/
 .vscode/
 *.swp
+*.swo
+*~
+Thumbs.db
 
 # Android/Gradle
 .gradle/
@@ -22,11 +25,23 @@ yarn-error.log*
 local.properties
 .cxx/
 *.iml
+captures/
+outputs/
+# Gradle wrapper caches
+.gradle/6.*/
+.gradle/7.*/
+.gradle/8.*/
 
 # PlatformIO
 .pio/
 .clangd/
 
+# Python/venv
+.venv/
+venv/
+__pycache__/
+
 # Misc
 .env
 .env.*
+*.local
