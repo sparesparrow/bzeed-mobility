@@ -1,8 +1,9 @@
 node_modules
 npm-debug.log
-Dockerfile
+Dockerfile*
+.dockerignore
 .git
 .gitignore
 .env
-coverage
-src/**/*.test.ts
+src
+prisma
