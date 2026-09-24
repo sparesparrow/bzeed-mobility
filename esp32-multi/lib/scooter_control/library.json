@@ -1,0 +1,11 @@
+{
+  "name": "scooter_control",
+  "version": "0.1.0",
+  "description": "Portable, unit-tested ES200-B scooter ESC protocol codec plus a reliability/redundancy control layer (keep-alive, link watchdog, failsafe, redundant transports).",
+  "keywords": ["scooter", "es200", "esc", "protocol", "reliability"],
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "srcFilter": ["+<*.cpp>"]
+  }
+}

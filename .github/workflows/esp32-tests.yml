@@ -1,0 +1,23 @@
+name: ESP32 Host Tests
+
+on:
+  push:
+    paths:
+      - 'esp32-multi/lib/**'
+      - 'esp32-multi/test/**'
+      - '.github/workflows/esp32-tests.yml'
+  pull_request:
+    paths:
+      - 'esp32-multi/lib/**'
+      - 'esp32-multi/test/**'
+      - '.github/workflows/esp32-tests.yml'
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install compiler
+        run: sudo apt-get update && sudo apt-get install -y g++
+      - name: Run scooter_control unit tests
+        run: ./esp32-multi/test/run_tests.sh
