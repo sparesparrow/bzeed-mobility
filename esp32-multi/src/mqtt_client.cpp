@@ -47,7 +47,13 @@ bool MqttClientWrapper::publish(const String& topic, const String& payload, bool
 }
 
 void MqttClientWrapper::handleMessage(char* topic, uint8_t* payload, unsigned int length) {
-  // Placeholder for command handling
+  if (!commandHandler) return;
+  String payloadStr;
+  payloadStr.reserve(length);
+  for (unsigned int i = 0; i < length; ++i) {
+    payloadStr += static_cast<char>(payload[i]);
+  }
+  commandHandler(String(topic), payloadStr);
 }
 
 String MqttClientWrapper::buildClientId() {
